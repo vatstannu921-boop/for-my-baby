@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+    <section class="hero">
+
+        <h1>Do you love me ❤️</h1>
+
+        <div class="buttons">
+            <button class="yes-btn">YES 💕</button>
+
+            <button class="no-btn" id="noBtn">NO 😭</button>
+        </div>
+
+    </section>
+
+    <script>
+        let noBtn = document.getElementById("noBtn");
+        let hero = document.querySelector(".hero");
+
+        noBtn.addEventListener("mouseenter", function () {
+
+            // Hero ki width aur height
+            let heroWidth = hero.clientWidth;
+            let heroHeight = hero.clientHeight;
+
+            // Button ki width aur height
+            let buttonWidth = noBtn.offsetWidth;
+            let buttonHeight = noBtn.offsetHeight;
+
+            // Random position
+            let randomX = Math.random() * (heroWidth - buttonWidth);
+            let randomY = Math.random() * (heroHeight - buttonHeight);
+
+            // Button ko new position par bhejo
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    height: 100vh;
+    background: #1b080d;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+}
+
+button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.yes-btn {
+    background: #e8a0b5;
+    color: white;
+}
+
+.no-btn {
+    background: #ffffff;
+    color: #1b080d;
+
+    position: absolute;
+
+    transition: left 0.3s ease, top 0.3s ease;
+}
